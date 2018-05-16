@@ -1,0 +1,28 @@
+ <form #recipeForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Nombre *</label>
+        <input type="text" class="form-control" [(ngModel)]="recipe.name" name="name" #name="ngModel" required >
+        <!--<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            El nombre es requerido
+          </div>-->              
+      </div>
+
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <input type="text" class="form-control" [(ngModel)]="recipe.description" name="description">
+      </div>
+
+      <div class="form-group">
+        <label for="image">Url Imagen</label>
+        <input type="text" class="form-control" [(ngModel)]="recipe.url" name="image">
+      </div>      
+
+      <div class="row">
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-success" [disabled]="!recipeForm.form.valid">Save</button>
+          <button type="button" class="btn btn-default" (click)="reset()">Reset</button>
+        </div>
+      </div>
+    </form>
+
+    

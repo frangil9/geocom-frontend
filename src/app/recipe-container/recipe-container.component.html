@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <form-receta [recipe]="recipe" (save)="onSubmit($event)">
+            </form-receta>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-md-12">
+        <list-recipe [recipes]="recipes" (edit)="editar($event)">
+        </list-recipe>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+.main-content {
+    margin-top: 60px;
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .collapsed + .main-content {
+    margin-left: 60px;
+  }
